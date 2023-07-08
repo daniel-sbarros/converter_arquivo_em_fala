@@ -1,4 +1,6 @@
 def ler_txt(path):
+    text = ""
     with open(path, 'r') as file:
-        text = file.read()
-    return text
+        for row in file:
+            text += row.strip() + "\n"
+    return text.strip()
